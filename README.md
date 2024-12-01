@@ -7,18 +7,22 @@ IMDb Directory Renamer is a Python script that helps organize and rename movie f
 
 - Cleans up and simplifies folder names by removing extraneous tags and encoding information.
 - Fetches movie details such as title, year, IMDb rating, and votes using IMDb API.
-- Allows users to manually select the correct movie from search results.
+- Allows users to select the correct movie from search results manually.
 - Supports retries and fallback mechanisms for fetching IMDb details.
 - Provides a dry-run option to preview changes before applying them.
+
+## Screenshot
+![image](https://github.com/user-attachments/assets/5122dfcc-8a39-42cd-8e52-2dd9d6688687)
+
 
 ## Requirements
 
 - Python 3.7+
 - Required Python packages:
-  - requests
-  - bs4
-  - IMDbPY
-  - argparse
+    - requests
+    - bs4
+    - IMDbPY
+    - argparse
 
 Install dependencies with:
 pip install requests beautifulsoup4 IMDbPY
@@ -58,18 +62,13 @@ All actions and errors are logged in the specified log file (default: `imdb_rena
 
 ## Examples
 
-### Before Renaming
-D:\Movies
-├── Movie_Name.720p.BluRay.x264
-├── Another_Movie.1080p.BRRip
+### Before & After Renaming
 
-### After Renaming
-D:\Movies
-├── Movie Name (2023) - IMDb- 7.5
-├── Another Movie (2021) - IMDb- 8.2
+Movie_Name.720p.BluRay.x264.1080p.BRRip
+
+Movie Name (2023) - IMDb- 7.5
 
 ## Notes
-
 - If the script cannot find a match, it allows manual retry with a custom name.
 - Ensure internet connectivity for IMDb API and Google Search.
 
